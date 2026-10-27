@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="crimson">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prem S.B | Portfolio - Student & Developer</title>
+  <meta name="description" content="Portfolio of Prem S.B - Second Year Student at KGCAS, Erode, India. Java Developer, Creator of Sports Tournament Team Registration and Match Result System.">
+  <meta name="author" content="Prem S.B">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+</head>
+<body>
+
+  <!-- Ambient Interactive Canvas Background -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Glowing Ambient Gradient Orbs -->
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+  <div class="glow-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      
+      <!-- Logo / Brand -->
+      <a href="#home" class="nav-brand" aria-label="Prem S.B Home">
+        <span class="brand-badge">&lt;PSB /&gt;</span>
+        <span class="brand-text">Prem<span class="brand-accent">.S.B</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active" data-nav="home">
+              <span class="nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              </span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link" data-nav="projects">
+              <span class="nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+              </span>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-nav="contact">
+              <span class="nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              </span>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions (Top GitHub Icon, Theme Switcher & Mobile Menu) -->
+      <div class="nav-actions">
+        
+        <!-- TOP GITHUB ICON (Integrated with icon linking to 25bit137-commits) -->
+        <a href="https://github.com/25bit137-commits?tab=repositories" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="nav-action-btn github-top-btn" 
+           id="top-github-btn"
+           title="View Prem's Repositories on GitHub"
+           aria-label="GitHub Repositories">
+          <svg class="github-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span class="github-label">GitHub</span>
+          <span class="github-pulse-dot" aria-hidden="true"></span>
+        </a>
+
+        <!-- Color Theme Switcher Dropdown -->
+        <div class="theme-dropdown-container">
+          <button class="nav-action-btn theme-toggle-btn" id="theme-btn" aria-label="Change Color Theme" title="Switch Color Palette">
+            <svg class="theme-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a7 7 0 0 0 0 14v6"></path>
+              <circle cx="12" cy="8" r="2"></circle>
+            </svg>
+            <span class="theme-color-dot" id="active-theme-dot"></span>
+          </button>
+          
+          <div class="theme-picker-menu" id="theme-menu">
+            <span class="theme-picker-title">Select Color Theme</span>
+            <div class="theme-options">
+              <button class="theme-opt-btn active" data-theme-value="crimson">
+                <span class="opt-swatch swatch-crimson"></span>
+                <span>Apex Crimson</span>
+              </button>
+              <button class="theme-opt-btn" data-theme-value="sapphire">
+                <span class="opt-swatch swatch-sapphire"></span>
+                <span>Cyber Sapphire</span>
+              </button>
+              <button class="theme-opt-btn" data-theme-value="emerald">
+                <span class="opt-swatch swatch-emerald"></span>
+                <span>Neon Emerald</span>
+              </button>
+              <button class="theme-opt-btn" data-theme-value="amber">
+                <span class="opt-swatch swatch-amber"></span>
+                <span>Champion Gold</span>
+              </button>
+              <button class="theme-opt-btn" data-theme-value="light">
+                <span class="opt-swatch swatch-light"></span>
+                <span>Clean Light</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="mobile-drawer-content">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="#home" class="mobile-nav-link" data-nav="home">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="mobile-nav-link" data-nav="projects">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="mobile-nav-link" data-nav="contact">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+        <div class="mobile-extra-actions">
+          <a href="https://github.com/25bit137-commits?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-github w-full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span>GitHub Repositories</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrap -->
+  <main class="main-content">
+
+    <!-- ==============================================
+         HOME SECTION
+         ============================================== -->
+    <section class="section hero-section" id="home">
+      <div class="container hero-container">
+        
+        <!-- Left Column: Content & Profile Badges -->
+        <div class="hero-content">
+          
+          <div class="hero-status-pill">
+            <span class="status-indicator-dot"></span>
+            <span class="status-text">Available for Projects &amp; Software Collaborations</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-greeting">Hello, I'm</span>
+            <span class="hero-name gradient-text">Prem S.B</span>
+          </h1>
+
+          <!-- Dynamic Typing Line -->
+          <div class="hero-dynamic-subtitle" aria-label="Dynamic roles and details">
+            <span class="code-bracket">&lt;</span>
+            <span class="typing-text" id="typing-text">KGCAS Student · Second Year</span>
+            <span class="typing-cursor">|</span>
+            <span class="code-bracket">/&gt;</span>
+          </div>
+
+          <!-- Academic & Location Metadata Pills -->
+          <div class="meta-pill-group">
+            <div class="meta-pill">
+              <span class="pill-icon">🎓</span>
+              <span class="pill-text"><strong>KGCAS Student</strong> (KG College of Arts and Science)</span>
+            </div>
+            <div class="meta-pill">
+              <span class="pill-icon">⚡</span>
+              <span class="pill-text"><strong>Second Year</strong> Undergraduate</span>
+            </div>
+            <div class="meta-pill">
+              <span class="pill-icon">📍</span>
+              <span class="pill-text"><strong>Erode</strong>, Tamil Nadu, India</span>
+            </div>
+          </div>
+
+          <p class="hero-description">
+            Passionate second-year developer specializing in <strong>Java</strong>, object-oriented software engineering, tournament scheduling logic, and dynamic web applications. Driven to build responsive, robust, and impactful digital systems.
+          </p>
+
+          <!-- Action Buttons Group -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Tournament System</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+            
+            <a href="#contact" class="btn btn-glass">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              <span>Contact (Gmail)</span>
+            </a>
+
+            <a href="https://github.com/25bit137-commits?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-icon-outline" title="Open GitHub Repositories">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <!-- Highlighted Project Teaser Box on Home -->
+          <div class="home-highlight-card">
+            <div class="highlight-badge-row">
+              <span class="spotlight-tag">⭐ Highlighted Project</span>
+              <span class="tech-tag">Java Capstone</span>
+            </div>
+            <h2 class="highlight-title">SPORTS TOURNAMENT TEAM REGISTRATION AND MATCH RESULT SYSTEM</h2>
+            <p class="highlight-desc">
+              Comprehensive Java system automating team registrations, fixture generation, match score recording, points calculation, and tournament standings persistence.
+            </p>
+            <div class="highlight-card-footer">
+              <a href="#projects" class="highlight-link">
+                <span>View Full System &amp; Live Simulation</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+              <a href="https://github.com/25bit137-commits/Java-Capstone-Final-Project-Premkumar" target="_blank" rel="noopener noreferrer" class="highlight-repo-link" title="Direct GitHub repo">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <span>github/Java-Capstone-Premkumar</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Profile Photo with Holographic Badges -->
+        <div class="hero-visual">
+          <div class="portrait-card-wrapper" id="portrait-wrapper">
+            
+            <!-- Dynamic 3D Photo Card -->
+            <div class="portrait-card" id="portrait-card">
+              <div class="portrait-frame">
+                <img src="assets/images/prem.jpg" alt="Prem S.B - Second Year KGCAS Student" class="portrait-image" id="profile-img">
+                <div class="portrait-glow-overlay"></div>
+                <div class="portrait-shine"></div>
+              </div>
+
+              <!-- Floating Interactive Badges -->
+              <div class="floating-badge badge-top-right">
+                <div class="badge-icon-wrap">🏆</div>
+                <div class="badge-content">
+                  <span class="badge-label">Focus</span>
+                  <span class="badge-value">Sports &amp; Java</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-left">
+                <div class="badge-icon-wrap">🏫</div>
+                <div class="badge-content">
+                  <span class="badge-label">KGCAS</span>
+                  <span class="badge-value">Second Year</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-right">
+                <div class="badge-icon-wrap">📍</div>
+                <div class="badge-content">
+                  <span class="badge-label">Location</span>
+                  <span class="badge-value">Erode, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Background decorative rings -->
+            <div class="card-ambient-ring ring-1"></div>
+            <div class="card-ambient-ring ring-2"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Highlights Grid: Key Strengths -->
+      <div class="container hero-metrics-container">
+        <div class="metrics-grid">
+          
+          <div class="metric-card">
+            <div class="metric-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+            <div class="metric-info">
+              <h3 class="metric-title">KGCAS Student</h3>
+              <p class="metric-desc">KG College of Arts and Science · 2nd Year Computer Science / IT</p>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+            </div>
+            <div class="metric-info">
+              <h3 class="metric-title">Java Tournament Engine</h3>
+              <p class="metric-desc">Team Rosters, Match Scoring Logic, Brackets &amp; Standings Computation</p>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="metric-info">
+              <h3 class="metric-title">Erode, India</h3>
+              <p class="metric-desc">Tamil Nadu · Open to local &amp; remote software development opportunities</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         PROJECTS SECTION
+         ============================================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>Portfolio Showcase</span>
+          </div>
+          <h2 class="section-title">Projects &amp; Code</h2>
+          <p class="section-subtitle">
+            Engineered software systems featuring real-world scheduling algorithms, team roster validation, and score calculation engines.
+          </p>
+        </div>
+
+        <!-- ==========================================
+             FEATURED SHOWCASE: SPORTS TOURNAMENT SYSTEM
+             ========================================== -->
+        <div class="project-spotlight-card">
+          <div class="spotlight-badge-banner">
+            <span class="spotlight-star">⭐</span>
+            <span>Featured Capstone Project · Prem S.B</span>
+          </div>
+
+          <div class="spotlight-grid">
+            
+            <!-- Left Info Column -->
+            <div class="spotlight-info">
+              <div class="project-meta-row">
+                <span class="project-type-pill">Java Desktop / CLI</span>
+                <span class="project-status-pill">Completed Capstone</span>
+              </div>
+
+              <h3 class="project-title-large">SPORTS TOURNAMENT TEAM REGISTRATION AND MATCH RESULT SYSTEM</h3>
+              
+              <p class="project-summary-text">
+                An advanced Object-Oriented Java software suite designed to streamline multi-sport tournament management. Features end-to-end team registration validation, automated match fixture scheduling, dynamic score recording, tie-breaking points table calculation, and persistent file storage.
+              </p>
+
+              <!-- Feature Highlights List -->
+              <div class="feature-bullets">
+                <div class="feature-bullet-item">
+                  <div class="bullet-check">✓</div>
+                  <div>
+                    <strong>Team &amp; Player Registration Logic:</strong>
+                    <span>Validates team rosters, player jersey numbers, sport categories (Cricket, Football, Basketball, Kabaddi), and team caps.</span>
+                  </div>
+                </div>
+
+                <div class="feature-bullet-item">
+                  <div class="bullet-check">✓</div>
+                  <div>
+                    <strong>Match Scoring &amp; Winner Determination:</strong>
+                    <span>Records real-time scores, calculates winner points (+2 win, +1 draw, 0 loss), and computes Net Run Rate / Goal Differential.</span>
+                  </div>
+                </div>
+
+                <div class="feature-bullet-item">
+                  <div class="bullet-check">✓</div>
+                  <div>
+                    <strong>Dynamic Points Table &amp; Leaderboards:</strong>
+                    <span>Automatically sorts teams in standings based on total points, wins, and tie-breaker statistics.</span>
+                  </div>
+                </div>
+
+                <div class="feature-bullet-item">
+                  <div class="bullet-check">✓</div>
+                  <div>
+                    <strong>File Storage &amp; Data Persistence:</strong>
+                    <span>Saves tournament state, match histories, and team rosters into persistent storage with safe Java File I/O.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Badges -->
+              <div class="tech-badge-list">
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">OOP Architecture</span>
+                <span class="tech-badge">Tournament Algorithms</span>
+                <span class="tech-badge">Data Structures</span>
+                <span class="tech-badge">Score Computation</span>
+                <span class="tech-badge">File I/O Persistence</span>
+                <span class="tech-badge">Git &amp; GitHub</span>
+              </div>
+
+              <!-- Project Action Links -->
+              <div class="spotlight-actions">
+                <a href="https://github.com/25bit137-commits/Java-Capstone-Final-Project-Premkumar" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-primary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  <span>Visit on GitHub</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+
+                <button class="btn btn-glass" id="open-specs-btn" aria-haspopup="dialog">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                  <span>Architecture &amp; Specs</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Right Interactive Demo / Tournament Console Column -->
+            <div class="spotlight-interactive">
+              
+              <div class="mockup-window">
+                <!-- Window Titlebar -->
+                <div class="mockup-titlebar">
+                  <div class="window-controls">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <span class="mockup-title">TournamentSystem.java — Live Interactive Demo</span>
+                  <span class="mockup-chip">Running</span>
+                </div>
+
+                <!-- Interactive Tournament Simulation Console -->
+                <div class="mockup-body">
+                  
+                  <!-- Filter bar with live user interaction -->
+                  <div class="demo-filter-header">
+                    <div class="demo-search-box">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                      <input type="text" id="tournament-search-input" placeholder="Live search teams, matches, or sport..." aria-label="Search tournament teams">
+                    </div>
+                  </div>
+
+                  <!-- Tournament Category / Sport Filter Tabs -->
+                  <div class="category-tabs" id="tournament-tab-bar">
+                    <button class="cat-pill active" data-sport="ALL">All Matches (4)</button>
+                    <button class="cat-pill" data-sport="Cricket">Cricket</button>
+                    <button class="cat-pill" data-sport="Football">Football</button>
+                    <button class="cat-pill" data-sport="Basketball">Basketball</button>
+                    <button class="cat-pill" data-sport="Kabaddi">Kabaddi</button>
+                  </div>
+
+                  <!-- Simulated Matches / Teams List -->
+                  <div class="simulated-contacts-list" id="mock-tournament-container">
+                    
+                    <div class="contact-card-item" data-sport="Cricket" data-team1="Erode Titans" data-team2="KGCAS Strikers">
+                      <div class="c-avatar cat-work-avatar">🏏</div>
+                      <div class="c-details">
+                        <div class="c-top">
+                          <span class="c-name">Erode Titans vs KGCAS Strikers</span>
+                          <span class="c-badge cat-work">Cricket</span>
+                        </div>
+                        <div class="c-bottom">
+                          <span>🏆 Result: Erode Titans won by 18 runs (162/4 vs 144/8)</span>
+                          <span class="score-tag">+2 Pts Awarded</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="contact-card-item" data-sport="Football" data-team1="Kongu Warriors" data-team2="Bhavani Blasters">
+                      <div class="c-avatar cat-friends-avatar">⚽</div>
+                      <div class="c-details">
+                        <div class="c-top">
+                          <span class="c-name">Kongu Warriors vs Bhavani Blasters</span>
+                          <span class="c-badge cat-friends">Football</span>
+                        </div>
+                        <div class="c-bottom">
+                          <span>🏆 Result: Kongu Warriors won 3 - 1 (Full Time)</span>
+                          <span class="score-tag">+2 Pts Awarded</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="contact-card-item" data-sport="Basketball" data-team1="KGCAS Hoopers" data-team2="Perundurai Hawks">
+                      <div class="c-avatar cat-family-avatar">🏀</div>
+                      <div class="c-details">
+                        <div class="c-top">
+                          <span class="c-name">KGCAS Hoopers vs Perundurai Hawks</span>
+                          <span class="c-badge cat-family">Basketball</span>
+                        </div>
+                        <div class="c-bottom">
+                          <span>🏆 Result: KGCAS Hoopers won 78 - 72 (Q4 Final)</span>
+                          <span class="score-tag">+2 Pts Awarded</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="contact-card-item" data-sport="Kabaddi" data-team1="Erode Raiders" data-team2="Cauvery Kings">
+                      <div class="c-avatar cat-emergency-avatar">🤼</div>
+                      <div class="c-details">
+                        <div class="c-top">
+                          <span class="c-name">Erode Raiders vs Cauvery Kings</span>
+                          <span class="c-badge cat-emergency">Kabaddi</span>
+                        </div>
+                        <div class="c-bottom">
+                          <span>🏆 Result: Erode Raiders won 41 - 36 (All Out in 2nd Half)</span>
+                          <span class="score-tag">+2 Pts Awarded</span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- Terminal status bar -->
+                  <div class="mockup-terminal-bar">
+                    <span class="term-status">Tournament Engine Status:</span>
+                    <span class="term-code" id="term-status-msg">Leaderboard Synced · 4 Registered Fixtures Active</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==========================================
+             ADDITIONAL PROJECTS & GITHUB SHOWCASE
+             ========================================== -->
+        <div class="secondary-projects-header">
+          <h3 class="secondary-title">More Works &amp; Repositories</h3>
+          <p class="secondary-desc">Curated projects highlighting Java algorithms, web interfaces, and student coursework.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="folder-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+              </div>
+              <a href="https://github.com/25bit137-commits?tab=repositories" target="_blank" rel="noopener noreferrer" class="card-repo-link" title="View repository">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+            <h4 class="card-title">Interactive Personal Portfolio</h4>
+            <p class="card-desc">
+              Custom-built vanilla HTML5, CSS3, and JavaScript portfolio featuring interactive animations, theme switching, and direct Gmail compose integration.
+            </p>
+            <div class="card-tags">
+              <span>HTML5</span>
+              <span>Modern CSS3</span>
+              <span>JavaScript ES6</span>
+              <span>Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="folder-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+              </div>
+              <a href="https://github.com/25bit137-commits?tab=repositories" target="_blank" rel="noopener noreferrer" class="card-repo-link" title="View repository">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+            <h4 class="card-title">Java OOP Algorithm &amp; Lab Suite</h4>
+            <p class="card-desc">
+              Academic implementations focusing on data structures, sorting algorithms, tournament bracket computation, and object-oriented design patterns.
+            </p>
+            <div class="card-tags">
+              <span>Java</span>
+              <span>Algorithms</span>
+              <span>Data Structures</span>
+              <span>OOP Concepts</span>
+            </div>
+          </div>
+
+          <!-- Project 4: GitHub Link Card -->
+          <div class="project-card github-spotlight-card">
+            <div class="project-card-top">
+              <div class="folder-icon-box github-highlight-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </div>
+              <span class="active-badge">Open Source</span>
+            </div>
+            <h4 class="card-title">Explore All Repositories</h4>
+            <p class="card-desc">
+              Browse the complete repository collection on GitHub to view code commits, student coursework, and open-source contributions.
+            </p>
+            <a href="https://github.com/25bit137-commits?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-github w-full mt-auto">
+              <span>github.com/25bit137-commits ↗</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         CONTACT SECTION (With Gmail Toggle Feature)
+         ============================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>Reach Out</span>
+          </div>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Have an inquiry, project proposal, or sports software collaboration in mind? Toggle direct Gmail compose or send a message below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left Column: Details & Direct Gmail Toggle Card -->
+          <div class="contact-info-card">
+            
+            <h3 class="contact-card-title">Connect with Prem S.B</h3>
+            <p class="contact-card-desc">
+              I am open to discussions regarding software internships, Java projects, sports tech development, and technical collaborations.
+            </p>
+
+            <!-- GMAIL TOGGLE COMPONENT (Configured to newpremramesh@gmail.com) -->
+            <div class="gmail-toggle-widget">
+              <div class="widget-header">
+                <div class="widget-icon-gmail">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="widget-title">Gmail Toggle Dispatcher</h4>
+                  <p class="widget-subtitle">Choose your preferred mailing mode</p>
+                </div>
+              </div>
+
+              <!-- Toggle Mode Selector Buttons -->
+              <div class="toggle-mode-pills" role="radiogroup" aria-label="Email Mode Selection">
+                <button type="button" class="mode-pill active" id="mode-web-gmail" data-mode="web" aria-checked="true" role="radio">
+                  <span>Web Gmail</span>
+                  <span class="mode-rec">Direct</span>
+                </button>
+                <button type="button" class="mode-pill" id="mode-client-mail" data-mode="client" aria-checked="false" role="radio">
+                  <span>Default Mail</span>
+                </button>
+                <button type="button" class="mode-pill" id="mode-copy-email" data-mode="copy" aria-checked="false" role="radio">
+                  <span>Copy Address</span>
+                </button>
+              </div>
+
+              <!-- Active Mode Status Display -->
+              <div class="mode-status-box">
+                <div class="mode-status-text" id="mode-status-text">
+                  Target: <strong>newpremramesh@gmail.com</strong> (Opens Google Mail web compose with pre-filled details)
+                </div>
+              </div>
+
+              <!-- Instant Quick Email Action Row -->
+              <div class="email-copy-bar">
+                <div class="email-display-text" id="target-email-str">newpremramesh@gmail.com</div>
+                <button type="button" class="copy-email-btn" id="copy-email-trigger" title="Copy email address">
+                  <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                  <span id="copy-btn-label">Copy</span>
+                </button>
+              </div>
+
+              <div class="direct-gmail-cta-wrap">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=newpremramesh@gmail.com&su=Portfolio%20Inquiry%20for%20Prem%20S.B" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-gmail w-full"
+                   id="direct-gmail-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                  <span>Launch Web Gmail Compose ↗</span>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Profile Details List -->
+            <div class="contact-details-list">
+              
+              <div class="detail-item">
+                <div class="detail-icon">🎓</div>
+                <div class="detail-content">
+                  <span class="detail-title">Education</span>
+                  <span class="detail-value">KG College of Arts and Science (KGCAS) · 2nd Year</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon">📍</div>
+                <div class="detail-content">
+                  <span class="detail-title">Location</span>
+                  <span class="detail-value">Erode, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon">🐙</div>
+                <div class="detail-content">
+                  <span class="detail-title">GitHub Profile</span>
+                  <a href="https://github.com/25bit137-commits?tab=repositories" target="_blank" rel="noopener noreferrer" class="detail-link">
+                    github.com/25bit137-commits
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Quick-Compose Form -->
+          <div class="contact-form-container">
+            <div class="form-header">
+              <h3 class="form-title">Send a Quick Message</h3>
+              <p class="form-desc">Fill out your message and send it directly to <strong>newpremramesh@gmail.com</strong>.</p>
+            </div>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              
+              <div class="form-group">
+                <label for="sender-name" class="form-label">Your Name</label>
+                <div class="input-wrap">
+                  <input type="text" id="sender-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-email" class="form-label">Your Email</label>
+                <div class="input-wrap">
+                  <input type="email" id="sender-email" class="form-input" placeholder="e.g. rahul@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email-subject" class="form-label">Subject</label>
+                <div class="input-wrap">
+                  <input type="text" id="email-subject" class="form-input" placeholder="e.g. Sports System Inquiry / Project Collaboration" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email-body" class="form-label">Message</label>
+                <div class="input-wrap">
+                  <textarea id="email-body" class="form-textarea" rows="4" placeholder="Hi Prem, I saw your portfolio and tournament management project and would like to connect..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full submit-send-btn" id="submit-contact-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <span id="send-btn-text">Compose in Gmail</span>
+              </button>
+
+              <p class="form-privacy-note">
+                🔒 Tapping send opens your email composer directly to <code>newpremramesh@gmail.com</code> with all fields cleanly formatted.
+              </p>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================
+       MODAL: Architecture & Specs
+       ============================================== -->
+  <div class="modal-backdrop" id="specs-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge">Java Capstone Architecture</span>
+          <h3 id="modal-heading" class="modal-title">SPORTS TOURNAMENT TEAM REGISTRATION AND MATCH RESULT SYSTEM</h3>
+        </div>
+        <button class="modal-close-btn" id="close-modal-btn" aria-label="Close modal">×</button>
+      </div>
+
+      <div class="modal-content">
+        
+        <div class="specs-section">
+          <h4 class="specs-subtitle">1. System Architecture &amp; OOP Design</h4>
+          <p class="specs-text">
+            Built using robust Object-Oriented principles in Java. It separates core data models (<code>Team.java</code>, <code>Player.java</code>), tournament fixtures (<code>MatchScheduler.java</code>), score tracking (<code>ResultEngine.java</code>), and points computation (<code>LeaderboardManager.java</code>).
+          </p>
+          <div class="code-snippet-box">
+<pre><code>// Modular Object Model Representation
+public class Team {
+    private String teamId;
+    private String teamName;
+    private SportCategory sport; // CRICKET, FOOTBALL, BASKETBALL, KABADDI
+    private List&lt;Player&gt; roster;
+    private int matchesPlayed;
+    private int wins;
+    private int losses;
+    private int points;
+    
+    // Encapsulated getters, setters &amp; score calculation methods
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="specs-section">
+          <h4 class="specs-subtitle">2. Match Scheduling &amp; Result Logic</h4>
+          <p class="specs-text">
+            Teams participate in round-robin and knockout fixtures. When match results are finalized, the engine dynamically recalculates points:
+          </p>
+          <ul class="specs-list">
+            <li><strong>Win:</strong> Awards +2 points to the winning team and updates scoring margins.</li>
+            <li><strong>Draw / Tie:</strong> Awards +1 point to each team with tie-breaker metrics.</li>
+            <li><strong>Loss:</strong> Records match completion with zero points awarded.</li>
+            <li><strong>Tie-Breaker Engine:</strong> Calculates Net Run Rate (Cricket) or Goal Differential (Football) for precise standings.</li>
+          </ul>
+        </div>
+
+        <div class="specs-section">
+          <h4 class="specs-subtitle">3. Data Persistence &amp; Storage</h4>
+          <p class="specs-text">
+            Provides file serialization and stream parsing to retain registered teams, historical match scores, and championship standings across system restarts.
+          </p>
+        </div>
+
+        <div class="modal-footer-actions">
+          <a href="https://github.com/25bit137-commits/Java-Capstone-Final-Project-Premkumar" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-primary">
+            <span>View Full Source on GitHub ↗</span>
+          </a>
+          <button type="button" class="btn btn-glass" id="close-specs-dismiss-btn">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Popup -->
+  <div class="toast-notification" id="toast-notify" role="alert" aria-live="polite">
+    <span class="toast-icon">✨</span>
+    <span class="toast-message" id="toast-message">Notification</span>
+  </div>
+
+  <!-- ==============================================
+       FOOTER
+       ============================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-left">
+        <a href="#home" class="footer-brand">
+          <span class="brand-badge">&lt;PSB /&gt;</span>
+          <span>Prem S.B</span>
+        </a>
+        <p class="footer-tagline">
+          Second Year Student at KGCAS · Erode, Tamil Nadu, India
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/25bit137-commits?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub Repositories</a>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social-links">
+          <!-- Top GitHub Link -->
+          <a href="https://github.com/25bit137-commits?tab=repositories" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="GitHub Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <!-- Gmail Toggle Link -->
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=newpremramesh@gmail.com" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Send Gmail">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+        <p class="footer-copy">Crafted with pure HTML · CSS · JS</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"></path></svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
